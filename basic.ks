@@ -16,7 +16,7 @@ timezone America/Los_Angeles --isUtc --ntpservers=0.pool.ntp.org,1.pool.ntp.org,
 auth  --useshadow  --passalgo=sha512 --enablefingerprint
 # Use CDROM installation media
 # cdrom
-url --url="http://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch"
+url --mirrorlist="http://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch"
 # Use text mode install
 # text
 # Run the Setup Agent on first boot
@@ -28,6 +28,7 @@ selinux --enforcing
 bootloader --location=mbr
 # Partition clearing information
 clearpart --all --initlabel
+autopart --type=lvm
 
 repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
 repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
