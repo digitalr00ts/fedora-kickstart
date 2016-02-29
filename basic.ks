@@ -1,7 +1,7 @@
 #platform=x86, AMD64, or Intel EM64T
 #version=DEVEL
 # Install OS instead of upgrade
-install
+# install
 # Keyboard layouts
 keyboard 'us'
 # System language
@@ -17,7 +17,7 @@ auth  --useshadow  --passalgo=sha512 --enablefingerprint
 # Use CDROM installation media
 cdrom
 # Use text mode install
-text
+# text
 # Run the Setup Agent on first boot
 firstboot --enable
 # SELinux configuration
