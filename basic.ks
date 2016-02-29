@@ -11,7 +11,7 @@ firewall --enabled --ssh
 # Reboot after installation
 reboot
 # System timezone
-timezone America/Los_Angeles --isUtc
+timezone America/Los_Angeles --isUtc --ntpservers=0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org
 # System authorization information
 auth  --useshadow  --passalgo=sha512 --enablefingerprint
 # Use CDROM installation media
