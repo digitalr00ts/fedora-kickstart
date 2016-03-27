@@ -1,5 +1,12 @@
 language: bash
+before_install:
+  - python --version
+  - pip --version
 install:
   - pip install --user six requests
   - git clone --depth 1 -b r2.20-1 git://github.com/rhinstaller/pykickstart.git
   - (cd pykickstart && pip install --user .)
+before_script:
+  - ls -l
+script:
+  - ./ksvalidator -l .
