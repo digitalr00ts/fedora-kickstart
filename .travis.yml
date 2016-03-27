@@ -1,0 +1,5 @@
+language: bash
+install:
+  - pip install --user six requests
+  - git clone --depth 1 -b r2.20-1 git://github.com/rhinstaller/pykickstart.git
+  - (cd pykickstart && pip install --user .)
